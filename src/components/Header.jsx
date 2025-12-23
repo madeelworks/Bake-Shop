@@ -4,6 +4,13 @@ import { Link, useLocation } from 'react-router-dom';
 const Header = () => {
   const { pathname, hash } = useLocation();
 
+  const handleLinkClick = () => {
+    const navbarCollapse = document.getElementById('navbarSupportedContent');
+    if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+      navbarCollapse.classList.remove('show');
+    }
+  };
+
   return (
     <header className="main_header_area five_header">
       
@@ -24,26 +31,26 @@ const Header = () => {
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav justify-content-end">
                 <li className={pathname === '/' && hash === '' ? 'active' : ''}>
-                  <Link to="/">Home</Link>
+                  <Link to="/" onClick={handleLinkClick}>Home</Link>
                 </li>
                 <li className={hash === '#about' ? 'active' : ''}>
-                  <Link to="/#about">About Us</Link>
+                  <Link to="/#about" onClick={handleLinkClick}>About Us</Link>
                 </li>
                 <li className={hash === '#cake' ? 'active' : ''}>
-                  <Link to="/#cake">Cakes</Link>
+                  <Link to="/#cake" onClick={handleLinkClick}>Cakes</Link>
                 </li>
 
                 <li className={pathname === '/menu' ? 'active' : ''}>
-                  <Link to="/menu">Menu</Link>
+                  <Link to="/menu" onClick={handleLinkClick}>Menu</Link>
                 </li>
                 <li className={pathname === '/gallery' ? 'active' : ''}>
-                  <Link to="/gallery">Gallery</Link>
+                  <Link to="/gallery" onClick={handleLinkClick}>Gallery</Link>
                 </li>
                 <li className={pathname === '/contact' ? 'active' : ''}>
-                  <Link to="/contact">Contact Us</Link>
+                  <Link to="/contact" onClick={handleLinkClick}>Contact Us</Link>
                 </li>
                 <li className="align-self-center">
-                  <a className="pink_btn" href="https://wa.me/923413663416" target="_blank" rel="noopener noreferrer" style={{ lineHeight: '45px', color: '#fff' }}>Order Now</a>
+                  <a className="pink_btn" href="https://wa.me/923413663416" target="_blank" rel="noopener noreferrer" style={{ lineHeight: '45px', color: '#fff' }} onClick={handleLinkClick}>Order Now</a>
                 </li>
               </ul>
             </div>
