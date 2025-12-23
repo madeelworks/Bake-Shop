@@ -8,8 +8,9 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Menu from './pages/Menu';
 import Cake from './pages/Cake';
+import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
-import Service from './pages/Service';
+
 import Cart from './pages/Cart';
 
 function App() {
@@ -22,8 +23,9 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/cake" element={<Cake />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/service" element={<Service />} />
+
         <Route path="/cart" element={<Cart />} />
       </Routes>
       <Footer />

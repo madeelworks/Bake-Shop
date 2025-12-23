@@ -32,17 +32,18 @@ const Header = () => {
                 <li className={hash === '#cake' ? 'active' : ''}>
                   <Link to="/#cake">Cakes</Link>
                 </li>
-                <li className={hash === '#service' ? 'active' : ''}>
-                  <Link to="/#service">Services</Link>
-                </li>
+
                 <li className={pathname === '/menu' ? 'active' : ''}>
                   <Link to="/menu">Menu</Link>
                 </li>
-                <li className={pathname === '/cart' ? 'active' : ''}>
-                  <Link to="/cart">Place Order</Link>
+                <li className={pathname === '/gallery' ? 'active' : ''}>
+                  <Link to="/gallery">Gallery</Link>
                 </li>
                 <li className={pathname === '/contact' ? 'active' : ''}>
                   <Link to="/contact">Contact Us</Link>
+                </li>
+                <li className="align-self-center">
+                  <a className="pink_btn" href="https://wa.me/923413663416" target="_blank" rel="noopener noreferrer" style={{ lineHeight: '45px', color: '#fff' }}>Order Now</a>
                 </li>
               </ul>
             </div>

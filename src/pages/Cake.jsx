@@ -263,7 +263,7 @@ const Cake = () => {
       {/*================End New Arivals Area =================*/}
 
       {/*================Client Says Area =================*/}
-      {/* <section className="client_says_area p_100">
+      <section className="client_says_area p_100">
         <div className="container">
           <div className="client_says_inner">
             <div className="c_says_title">
@@ -304,7 +304,7 @@ const Cake = () => {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
       {/*================End Client Says Area =================*/}
 
       {/*================Special Area =================*/}
