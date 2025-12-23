@@ -48,13 +48,10 @@ const Contact = () => {
             </div>
             <div className="col-lg-4 offset-md-1">
               <div className="contact_details">
+                
                 <div className="contact_d_item">
-                  <h3>Address :</h3>
-                  <p>28 Usuma Street Maitama Abuja Fct</p>
-                </div>
-                <div className="contact_d_item">
-                  <h5>Phone : <a href="tel:+2348170245555">+2348170245555</a></h5>
-                  <h5>Email : <a href="mailto:Treatsbyminibakery@gmail.com">Treatsbyminibakery@gmail.com</a></h5>
+                  <h5>Phone : <a href="tel:+92 341 3663416">+92 341 3663416</a></h5>
+                  <h5>Email : <a href="https://mail.google.com/mail/?view=cm&fs=1&to=dryums.bakery@gmail.com&su=Dr-Yums%20Inquiry&body=Hello%20Team," target="_blank" rel="noopener noreferrer"><i className="">dryums.bakery@gmail.com</i></a></h5>
                 </div>
                 <div className="contact_d_item">
                   <h3>Opening Hours :</h3>
@@ -68,14 +65,13 @@ const Contact = () => {
       </section>
       {/*================End Contact Form Area =================*/}
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.8617300655633!2d7.495566578401442!3d9.076358867747128!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0a49a8364dad%3A0xeafd39deb67c0cad!2s28%20Usuma%20St%2C%20Maitama%2C%20Abuja%20904101%2C%20Federal%20Capital%20Territory!5e0!3m2!1sen!2sng!4v1702674274782!5m2!1sen!2sng" width="600" height="450" style={{ border: 0 }} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
 
       {/*================Special Area =================*/}
       <section className="special_area p_100">
         <div className="container">
           <div className="main_title">
-            <h2>Treats by Mimi is now taking orders via WhatsApp. </h2>
-            <h5>Send a message to [+234 8170245555].<br />
+            <h2>Dr-Yums is now taking orders via WhatsApp. </h2>
+            <h5>Send a message to [+92 341 3663416].<br />
               Browse our menu or tell us your cravings.<br />
               Specify quantities, flavors, and any special requests.<br />
               Choose your preferred pick-up time or delivery option (if available).<br />
@@ -93,7 +89,8 @@ const Contact = () => {
                 <div className="col-lg-8">
                   <div className="special_item_text">
                     <h4>Call Or A Send Message </h4>
-                    <a className="pink_btn" href="https://wa.me/c/2348170245555 ">WhatsApp</a>
+                    {/* <a href="https://wa.me/923413663416" target="_blank" rel="noopener noreferrer"><i className="fa fa-whatsapp"></i></a> */}
+                    <a className="pink_btn" target="_blank" href="https://wa.me/923413663416">WhatsApp</a>
                   </div>
                 </div>
               </div>

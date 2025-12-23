@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import About from './About';
 import Cake from './Cake';
-import Service from './Service';
+
 
 const Home = () => {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -116,22 +116,7 @@ const Home = () => {
     }
     events_specials_slider();
 
-    // Special Recipe Slider
-    function recipe_slider() {
-      if ($('.special_recipe_slider').length) {
-        $('.special_recipe_slider').owlCarousel({
-          loop: true,
-          margin: 0,
-          items: 1,
-          nav: false,
-          autoplay: true,
-          smartSpeed: 1500,
-          dots: true,
-          responsiveClass: true,
-        })
-      }
-    }
-    recipe_slider();
+
 
   }, []);
 
@@ -221,61 +206,7 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Special Recipe Area */}
-      <section className="special_recipe_area">
-        <div className="container">
-          <div className="special_recipe_slider owl-carousel">
-            <div className="item">
-              <div className="media">
-                <div className="d-flex">
-                  <img src="/img/recipe/recipe-1.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <h4>Planning a party or event </h4>
-                  <p> Ovenly Delights is your one-stop shop for delicious and stress-free catering. We offer a variety of catering packages to suit your needs, from intimate gatherings to large celebrations. We'll work with you to create a custom menu that will wow your guests and leave them wanting more.   </p>
-                  <Link className="w_view_btn" to="/service">View Details</Link>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="media">
-                <div className="d-flex">
-                  <img src="/img/recipe/recipe-1.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <h4>A Menu Made for Moments </h4>
-                  <p> Our delectable menu goes beyond just cookies and cakes. We offer a variety of freshly baked breads, pastries, and savory treats perfect for any occasion. From flaky croissants and muffins for breakfast to quiche and tarts for lunch, we have something to tantalize your taste buds all day long. </p>
-                  <Link className="w_view_btn" to="/service">View Details</Link>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="media">
-                <div className="d-flex">
-                  <img src="/img/recipe/recipe-1.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <h4>Sweet Treats Delivered to Your Door  </h4>
-                  <p> We offer convenient delivery right to your doorstep, so you can enjoy our treats fresh from the oven. Whether it's a surprise cookie box for a loved one or a full dessert spread for your next party, we'll make sure it arrives safely and deliciously.  </p>
-                  <Link className="w_view_btn" to="/service">View Details</Link>
-                </div>
-              </div>
-            </div>
-            <div className="item">
-              <div className="media">
-                <div className="d-flex">
-                  <img src="/img/recipe/recipe-1.png" alt="" />
-                </div>
-                <div className="media-body">
-                  <h4>Wedding Cakes: The Sweetest Start to Your Forever </h4>
-                  <p>Your dream wedding cake awaits at Ovenly Delights! We work closely with you to design a cake that reflects your love story, from traditional tiered masterpieces to modern naked cakes adorned with fresh fruit. We also offer a variety of flavors, fillings, and frostings to ensure your cake is as delicious as it is beautiful.  </p>
-                  <Link className="w_view_btn" to="/service">View Details</Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
 
       {/* New Arrivals Area */}
       <section className="new_arivals_area p_100">
@@ -684,9 +615,7 @@ const Home = () => {
       <div id="cake">
         <Cake />
       </div>
-      <div id="service">
-        <Service />
-      </div>
+
     </div>
   );
 };
