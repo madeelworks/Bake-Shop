@@ -878,10 +878,7 @@
 		max-width: 100%;
 		flex: 0 0 100%;
 	}
-	.cake_feature_row .col-6{
-		max-width: 100%;
-		flex: 0 0 100%;
-	}
+
 	.cake_feature_main .cake_feature_row .cake_feature_item {
 		max-width: 270px;
 		margin: 0px auto 50px;

@@ -5,18 +5,18 @@ const Cake = () => {
   const [visibleCount, setVisibleCount] = useState(8);
 
   const cakes = [
-    { name: "Mehndi Celebration", price: "N18k", image: "/img/cake-feature/c-feature-1.jpg" },
-    { name: "Eid Special", price: "N18k", image: "/img/cake-feature/c-feature-2.jpg" },
-    { name: "Independence Day", price: "N18k", image: "/img/cake-feature/c-feature-3.jpg" },
-    { name: "Wedding Qubool Hai", price: "N18k", image: "/img/cake-feature/c-feature-4.jpg" },
-    { name: "Graduation Classic", price: "N18k", image: "/img/cake-feature/c-feature-9.jpg" },
-    { name: "Diploma Delight", price: "N18k", image: "/img/cake-feature/c-feature-6.jpg" },
-    { name: "Success Story", price: "N18k", image: "/img/cake-feature/c-feature-7.jpg" },
-    { name: "Farewell Memory", price: "N18k", image: "/img/cake-feature/c-feature-8.jpg" },
-    { name: "Anniversary Love", price: "N18k", image: "/Annivarsary.png" },
-    { name: "Birthday Bash", price: "N18k", image: "/Birthday.png" },
-    { name: "Royal Treat", price: "N18k", image: "/Royal.png" },
-    { name: "Blue Lagoon", price: "N18k", image: "/Blue.png" },
+    { name: "Mehndi Celebration",  image: "/img/cake-feature/Mehndi.png" },
+    { name: "Eid Special",  image: "/img/cake-feature/Eid.png" },
+    { name: "Independence Day", image: "/img/cake-feature/pakistan.png" },
+    { name: "Wedding Qubool Hai",  image: "/img/cake-feature/qabool.png" },
+    { name: "Graduation Classic",  image: "/img/cake-feature/Degree.png" },
+    { name: "Welcome",  image: "/img/cake-feature/welcome.png" },
+    { name: "Engagement", image: "/img/cake-feature/Engage.png" },
+    { name: "Farewell Memory",  image: "/img/cake-feature/Farewell.png" },
+    { name: "Anniversary Love",  image: "/Annivarsary.png" },
+    { name: "Birthday Bash",  image: "/Birthday.png" },
+    { name: "Royal Treat",  image: "/Royal.png" },
+    { name: "Blue Lagoon",  image: "/Blue.png" },
   ];
 
   const handleViewMore = () => {
@@ -93,7 +93,7 @@ const Cake = () => {
           <div className="main_title">
             <h2>Our Cakes</h2>
             <h5>No matter the occasion, there's a perfect event cake out there waiting to be discovered. Consider the theme, guest preferences, and overall ambiance to choose the one that will make your celebration truly unforgettable.
-              We invite you to step into our haven of handcrafted delights and experience the difference that quality, passion, and dedication make. Whether you're planning a special occasion, seeking a sweet afternoon treat, or simply looking to connect with your community over a shared love of deliciousness, Treats by Mimi is your destination. </h5>
+              We invite you to step into our haven of handcrafted delights and experience the difference that quality, passion, and dedication make. Whether you're planning a special occasion, seeking a sweet afternoon treat, or simply looking to connect with your community over a shared love of deliciousness. </h5>
           </div>
           <div className="cake_feature_row row">
             {cakes.slice(0, visibleCount).map((cake, index) => (
@@ -103,7 +103,6 @@ const Cake = () => {
                     <img style={{ height: '6cm', width: '6cm' }} src={cake.image} alt={cake.name} />
                   </div>
                   <div className="cake_text">
-                    <h4>{cake.price}</h4>
                     <h3>{cake.name}</h3>
                     <Link className="pest_btn" to="#">Add to cart</Link>
                   </div>
@@ -133,28 +132,30 @@ const Cake = () => {
                   <h5>You can also tell us what flavour you prefer </h5>
                 </div>
               </div>
-              <div className="float-right">
+              {/* <div className="float-right">
                 <a className="pest_w_btn" href="https://www.instagram.com/p/CztD2gXItpu/?img_index=1 ">View Full Menu </a>
-              </div>
+              </div> */}
             </div>
             <div className="row">
               <div className="col-lg-6">
                 <div className="discover_item_inner">
                   <div className="discover_item">
                     <h4>Vanilla </h4>
-                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
+                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall 
+                       {/* <span>N18k -N100k </span> */}
+                       </p>
                   </div>
                   <div className="discover_item">
                     <h4>Red Velvet </h4>
-                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
+                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  </p>
                   </div>
                   <div className="discover_item">
                     <h4> Nutmeg </h4>
-                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
+                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  </p>
                   </div>
                   <div className="discover_item">
                     <h4>Lemon </h4>
-                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
+                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  </p>
                   </div>
                 </div>
               </div>
@@ -162,19 +163,19 @@ const Cake = () => {
                 <div className="discover_item_inner">
                   <div className="discover_item">
                     <h4>Orea</h4>
-                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
+                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  </p>
                   </div>
                   <div className="discover_item">
                     <h4>Coffee</h4>
-                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
+                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  </p>
                   </div>
                   <div className="discover_item">
                     <h4>Blueberry </h4>
-                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
+                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  </p>
                   </div>
                   <div className="discover_item">
                     <h4> Coconut </h4>
-                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  <span>N18k -N100k </span></p>
+                    <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall  </p>
                   </div>
                 </div>
               </div>
