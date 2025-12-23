@@ -67,17 +67,17 @@ const About = () => {
       {/*================End Banner Area =================*/}
 
       {/*================Our Bakery Area =================*/}
-      <section className="our_bakery_area p_100">
+      <section className="our_bakery_area" style={{ padding: '50px 0 20px 0' }}>
         <div className="container">
           <div className="our_bakery_text">
             <h2>About Us </h2>
-            <h6>Mimi's love for baking began at a young age. She would spend hours in the kitchen learning the secrets of creating the perfect cakes. After years of perfecting her craft,
-              Mimi decided to open her own bakery so she could share her delicious creations with the world.
+            <h6>Dr-Yumd love for baking began at a young age. She would spend hours in the kitchen learning the secrets of creating the perfect cakes. After years of perfecting her craft,
+              Yums decided to open her own bakery so she could share her delicious creations with the world.
             </h6>
-            <p> We're passionate about crafting irresistible cookies, cupcakes, cakes, and other delights that tantalize your taste buds and bring joy to you and your special occasions.
-              We believe that quality ingredients and meticulous attention to detail are essential for creating truly exceptional treats.  We believe that sharing sweet treats is a way to connect with loved ones, celebrate special occasions, and create lasting memories. We're passionate about being a part of your life's sweet moments, and we invite you to come visit us and experience the Treats by Mimi difference. </p>
+            <p> We're passionate about crafting cakes, cupcakes, and other delights that tantalize your taste buds and bring joy to you and your special occasions.
+              We believe that quality ingredients and meticulous attention to detail are essential for creating truly exceptional treats.  We believe that sharing sweet treats is a way to connect with loved ones, celebrate special occasions, and create lasting memories. We're passionate about being a part of your life's sweet moments, and we invite you to come visit us and experience the Treats by dr-yums difference. </p>
           </div>
-          <div className="row our_bakery_image">
+          {/* <div className="row our_bakery_image">
             <div className="col-md-4 col-6">
               <img className="img-fluid" src="/p5.PNG" alt="" />
             </div>
@@ -87,13 +87,13 @@ const About = () => {
             <div className="col-md-4 col-6">
               <img className="img-fluid" src="/p11.PNG" alt="" />
             </div>
-          </div>
+          </div> */}
         </div>
       </section>
       {/*================End Our Bakery Area =================*/}
 
       {/*================Our Mission Area =================*/}
-      <section className="our_mission_area p_100">
+      {/* <section className="our_mission_area p_100">
         <div className="container">
           <div className="row our_mission_inner">
             <div className="col-lg-3">
@@ -119,11 +119,11 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*================End Our Mission Area =================*/}
 
       {/*================New Arivals Area =================*/}
-      <section className="new_arivals_area p_100">
+      {/* <section className="new_arivals_area p_100">
         <div className="container">
           <div className="single_pest_title">
             <h2> Christmas-themed flavored cakes </h2>
@@ -197,13 +197,13 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*================End New Arivals Area =================*/}
 
       {/*================Special Area =================*/}
-      <section className="special_area p_100">
+      <section className="special_area" style={{ padding: '20px 0 100px 0' }}>
         <div className="container">
-          <div className="main_title">
+          {/* <div className="main_title">
             <h2>Treats by Mimi is now taking orders via WhatsApp. </h2>
             <h5>Send a message to [+234 8170245555].<br />
               Browse our menu or tell us your cravings.<br />
@@ -211,7 +211,7 @@ const About = () => {
               Choose your preferred pick-up time or delivery option (if available).<br />
               We'll confirm your order and send you payment details.<br />
               Sit back, relax, and await your sweet treat! </h5>
-          </div>
+          </div> */}
           <div className="special_item_inner">
             <div className="specail_item">
               <div className="row">
@@ -222,9 +222,8 @@ const About = () => {
                 </div>
                 <div className="col-lg-8">
                   <div className="special_item_text">
-                    <h4>Call Or A Send Message </h4>
-                    <p></p>
-                    <a className="pink_btn" href="https://wa.me/c/2348170245555 ">WhatsApp</a>
+                    <h4>Our Baking Philosophy</h4>
+                    <p>We believe that baking is an art form. Every cake, cookie, and pastry is crafted with precision, passion, and the finest ingredients. Our goal is not just to feed the body, but to delight the soul with every bite.</p>
                   </div>
                 </div>
               </div>
@@ -234,13 +233,12 @@ const About = () => {
                 <div className="col-lg-6">
                   <div className="s_item_left">
                     <div className="main_title">
-                      <h2>Don't forget to:</h2>
+                      <h2>Why Choose Dr-Yums?</h2>
                     </div>
                     <ul className="list_style">
-                      <li><a href="#">
-                        Tell us your preferred pick-up location (if applicable).<br />
-                        Feel free to ask us any questions about our menu or ingredients.<br />
-                        We're excited to make your dessert dreams a reality, one WhatsApp message at a time! </a></li>
+                      <li><a href="#">Fresh, locally sourced ingredients ensuring top quality.</a></li>
+                      <li><a href="#">Custom designs tailored to your special occasions.</a></li>
+                      <li><a href="#">A commitment to excellence and unforgettable taste.</a></li>
                     </ul>
                   </div>
                 </div>
@@ -257,7 +255,7 @@ const About = () => {
       {/*================End Special Area =================*/}
 
       {/*================Client Says Area =================*/}
-      <section className="client_says_area p_100">
+      {/* <section className="client_says_area p_100">
         <div className="container">
           <div className="client_says_inner">
             <div className="c_says_title">
@@ -298,7 +296,7 @@ const About = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*================End Client Says Area =================*/}
     </div>
   );

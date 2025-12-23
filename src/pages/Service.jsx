@@ -226,7 +226,7 @@ const Service = () => {
       {/*================End Special Recipe Area =================*/}
 
       {/*================Discover Menu Area =================*/}
-      <section className="discover_menu_area service_menu">
+      {/* <section className="discover_menu_area service_menu">
         <div className="discover_menu_inner">
           <div className="container">
             <div className="s_dis_title">
@@ -284,11 +284,11 @@ const Service = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*================End Discover Menu Area =================*/}
 
       {/*================New Arivals Area =================*/}
-      <section className="new_arivals_area p_100">
+      {/* <section className="new_arivals_area p_100">
         <div className="container">
           <div className="single_pest_title">
             <h2> Christmas-themed flavored cakes </h2>
@@ -362,7 +362,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*================End New Arivals Area =================*/}
 
       {/*================Client Says Area =================*/}

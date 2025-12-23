@@ -1,7 +1,28 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Cake = () => {
+  const [visibleCount, setVisibleCount] = useState(8);
+
+  const cakes = [
+    { name: "Mehndi Celebration", price: "N18k", image: "/img/cake-feature/c-feature-1.jpg" },
+    { name: "Eid Special", price: "N18k", image: "/img/cake-feature/c-feature-2.jpg" },
+    { name: "Independence Day", price: "N18k", image: "/img/cake-feature/c-feature-3.jpg" },
+    { name: "Wedding Qubool Hai", price: "N18k", image: "/img/cake-feature/c-feature-4.jpg" },
+    { name: "Graduation Classic", price: "N18k", image: "/img/cake-feature/c-feature-9.jpg" },
+    { name: "Diploma Delight", price: "N18k", image: "/img/cake-feature/c-feature-6.jpg" },
+    { name: "Success Story", price: "N18k", image: "/img/cake-feature/c-feature-7.jpg" },
+    { name: "Farewell Memory", price: "N18k", image: "/img/cake-feature/c-feature-8.jpg" },
+    { name: "Anniversary Love", price: "N18k", image: "/Annivarsary.png" },
+    { name: "Birthday Bash", price: "N18k", image: "/Birthday.png" },
+    { name: "Royal Treat", price: "N18k", image: "/Royal.png" },
+    { name: "Blue Lagoon", price: "N18k", image: "/Blue.png" },
+  ];
+
+  const handleViewMore = () => {
+    setVisibleCount(cakes.length);
+  };
+
   useEffect(() => {
     const $ = window.jQuery;
     if (!$) return;
@@ -75,151 +96,28 @@ const Cake = () => {
               We invite you to step into our haven of handcrafted delights and experience the difference that quality, passion, and dedication make. Whether you're planning a special occasion, seeking a sweet afternoon treat, or simply looking to connect with your community over a shared love of deliciousness, Treats by Mimi is your destination. </h5>
           </div>
           <div className="cake_feature_row row">
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p2.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>Divergent</h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p3.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>White walker </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
+            {cakes.slice(0, visibleCount).map((cake, index) => (
+              <div className="col-lg-3 col-md-4 col-6" key={index}>
+                <div className="cake_feature_item">
+                  <div className="cake_img">
+                    <img style={{ height: '6cm', width: '6cm' }} src={cake.image} alt={cake.name} />
+                  </div>
+                  <div className="cake_text">
+                    <h4>{cake.price}</h4>
+                    <h3>{cake.name}</h3>
+                    <Link className="pest_btn" to="#">Add to cart</Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p4.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>No Stain </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p5.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>Divergent </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p6.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>Alieratie </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p7.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>Saphire </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p8.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>Royalty </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p9.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>Swiss Blue </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p10.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>Angelic </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p11.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>Nobel </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p12.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3>Colour Bomb </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-4 col-6">
-              <div className="cake_feature_item">
-                <div className="cake_img">
-                  <img style={{ height: '6cm', width: '6cm' }} src="/p13.PNG" alt="" />
-                </div>
-                <div className="cake_text">
-                  <h4>N18k</h4>
-                  <h3> Golden Hour </h3>
-                  <Link className="pest_btn" to="#">Add to cart</Link>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
+          {visibleCount < cakes.length && (
+            <div className="row" style={{ marginTop: '30px', textAlign: 'center' }}>
+              <div className="col-lg-12">
+                <button className="pest_btn" onClick={handleViewMore}>View More</button>
+              </div>
+            </div>
+          )}
         </div>
       </section>
       {/*================End Blog Main Area =================*/}
@@ -287,7 +185,7 @@ const Cake = () => {
       {/*================End Discover Menu Area =================*/}
 
       {/*================New Arivals Area =================*/}
-      <section className="new_arivals_area p_100">
+      {/* <section className="new_arivals_area p_100">
         <div className="container">
           <div className="single_pest_title">
             <h2> Christmas-themed flavored cakes </h2>
@@ -361,11 +259,11 @@ const Cake = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*================End New Arivals Area =================*/}
 
       {/*================Client Says Area =================*/}
-      <section className="client_says_area p_100">
+      {/* <section className="client_says_area p_100">
         <div className="container">
           <div className="client_says_inner">
             <div className="c_says_title">
@@ -406,11 +304,11 @@ const Cake = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*================End Client Says Area =================*/}
 
       {/*================Special Area =================*/}
-      <section className="special_area p_100">
+      {/* <section className="special_area p_100">
         <div className="container">
           <div className="main_title">
             <h2>Treats by Mimi is now taking orders via WhatsApp. </h2>
@@ -464,7 +362,7 @@ const Cake = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
       {/*================End Special Area =================*/}
     </div>
   );

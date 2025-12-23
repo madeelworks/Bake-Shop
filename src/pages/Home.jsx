@@ -1,8 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import About from './About';
+import Cake from './Cake';
+import Service from './Service';
 
 const Home = () => {
   const [selectedImage, setSelectedImage] = useState(null);
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.querySelector(hash);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
 
   useEffect(() => {
     const $ = window.jQuery;
@@ -72,10 +85,10 @@ const Home = () => {
     }
     client_say_slider();
 
-    // Arrivals Slider
-    function arivals_slider() {
-      if ($('.arivals_slider').length) {
-        $('.arivals_slider').owlCarousel({
+    // Events Specials Slider
+    function events_specials_slider() {
+      if ($('.events_specials_slider').length) {
+        $('.events_specials_slider').owlCarousel({
           loop: true,
           margin: 30,
           items: 4,
@@ -92,7 +105,7 @@ const Home = () => {
               items: 2,
             },
             768: {
-              items: 3,
+              items: 4,
             },
             992: {
               items: 4,
@@ -101,7 +114,7 @@ const Home = () => {
         })
       }
     }
-    arivals_slider();
+    events_specials_slider();
 
     // Special Recipe Slider
     function recipe_slider() {
@@ -272,7 +285,7 @@ const Home = () => {
           </div>
           <div className="row arivals_inner">
             <div className="col-lg-12">
-              <div className="arivals_slider owl-carousel">
+              <div className="events_specials_slider owl-carousel">
                 <div className="item">
                   <div className="cake_feature_item">
                     <div className="cake_img">
@@ -325,7 +338,7 @@ const Home = () => {
       </section>
 
       {/* Discover Menu Area */}
-      <section className="discover_menu_area service_menu">
+      {/* <section className="discover_menu_area service_menu">
         <div className="discover_menu_inner">
           <div className="container">
             <div className="s_dis_title">
@@ -345,7 +358,6 @@ const Home = () => {
                   <div className="discover_item">
                     <h4>Vanilla </h4>
                     <p>4 feet tall , 6 feet tall ,8 feet tall , 10 feet tall 
-                       {/* <span>N18k -N100k </span> */}
                        </p>
                   </div>
                   <div className="discover_item">
@@ -385,7 +397,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     {/* Our Mission Area */}
       <section className="our_mission_area p_100">
         <div className="container">
@@ -415,7 +427,7 @@ const Home = () => {
         </div>
       </section>
       {/* Client Says Area */}
-      <section className="client_says_area p_100">
+      {/* <section className="client_says_area p_100">
         <div className="container">
           <div className="client_says_inner">
             <div className="c_says_title">
@@ -456,7 +468,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
   
 
@@ -559,7 +571,7 @@ const Home = () => {
         </section> */}
 
       {/* Special Area */}
-      <section className="special_area p_100">
+      {/* <section className="special_area p_100">
         <div className="container">
           <div className="main_title">
             <h2>Treats by Mimi is now taking orders via WhatsApp. </h2>
@@ -612,7 +624,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Image Modal */}
       {selectedImage && (
@@ -666,6 +678,15 @@ const Home = () => {
           </div>
         </div>
       )}
+      <div id="about">
+        <About />
+      </div>
+      <div id="cake">
+        <Cake />
+      </div>
+      <div id="service">
+        <Service />
+      </div>
     </div>
   );
 };
