@@ -51,7 +51,7 @@ const Home = () => {
           responsiveClass: true,
           responsive: {
             0: {
-              items: 1,
+              items: 2,
             },
             430: {
               items: 2,
@@ -99,7 +99,7 @@ const Home = () => {
           responsiveClass: true,
           responsive: {
             0: {
-              items: 1,
+              items: 2,
             },
             576: {
               items: 2,
@@ -342,9 +342,9 @@ const Home = () => {
               <div className="mission_inner_text">
                 <h6>At Dr-Yums, we believe that life’s sweetest moments deserve a touch of magic. We’re not just bakers; we’re creators of joy, crafting treats that spark smiles, fuel laughter, and make lasting memories.</h6>
                 <p> At Dr-Yums, we believe that life’s sweetest moments deserve a little extra joy. Whether it’s a birthday cake with glowing candles or the joy of a warm croissant on a Sunday morning, we’re here to make every moment sweeter.<br /><br />
-                Our bakery isn’t just a place; it’s a welcoming space where kindness and connection are shared. It’s where laughter and love come together over fresh, homemade treats.<br /><br />
+                {/* Our bakery isn’t just a place; it’s a welcoming space where kindness and connection are shared. It’s where laughter and love come together over fresh, homemade treats.<br /><br />
                   We’re always looking for new ideas, experimenting with flavors and textures to bring you exciting new treats that will make your taste buds smile.<br /><br />
-                  At Dr-Yums, we care about what we bake. We use the best local ingredients, taking care to treat them well and keep the planet and community in mind.<br /><br />
+                  At Dr-Yums, we care about what we bake. We use the best local ingredients, taking care to treat them well and keep the planet and community in mind.<br /><br /> */}
                  Dr-Yums isn’t just a bakery – it’s our promise to make your life a little sweeter, one delicious bite at a time. Come visit us and enjoy our handcrafted treats, and let us be part of your sweetest memories.</p>
                 <ul className="nav">
                   <li><a>Custom cakes</a></li>

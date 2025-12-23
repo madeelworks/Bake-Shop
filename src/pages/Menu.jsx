@@ -29,33 +29,33 @@ const Menu = () => {
   }, []);
 
   const cakes = [
-    { name: "Wedding Qubool Hai", price: "N18k", image: "/wedding.png" },
-    { name: "Diploma Delight", price: "N18k", image: "/Graduate.png" },
-    { name: "Success Story", price: "N18k", image: "/Royal.png" },
-    { name: "Independence Day", price: "N18k", image: "/Blue.png" },
-    { name: "Wedding Qubool Hai", price: "N18k", image: "/wedding.png" },
-    { name: "Diploma Delight", price: "N18k", image: "/Graduate.png" },
-    { name: "Success Story", price: "N18k", image: "/Royal.png" },
-    { name: "Independence Day", price: "N18k", image: "/Blue.png" },
-    { name: "Wedding Qubool Hai", price: "N18k", image: "/wedding.png" },
-    { name: "Diploma Delight", price: "N18k", image: "/Graduate.png" },
-    { name: "Success Story", price: "N18k", image: "/Royal.png" },
-    { name: "Independence Day", price: "N18k", image: "/Blue.png" },
+    { name: "Mehndi Celebration",  image: "/img/cake-feature/Mehndi.png" },
+    { name: "Eid Special",  image: "/img/cake-feature/Eid.png" },
+    { name: "Independence Day", image: "/img/cake-feature/pakistan.png" },
+    { name: "Wedding Qubool Hai",  image: "/img/cake-feature/qabool.png" },
+    { name: "Graduation Classic",  image: "/img/cake-feature/Degree.png" },
+    { name: "Welcome",  image: "/img/cake-feature/welcome.png" },
+    { name: "Engagement", image: "/img/cake-feature/Engage.png" },
+    { name: "Farewell Memory",  image: "/img/cake-feature/Farewell.png" },
+    { name: "Anniversary Love",  image: "/Annivarsary.png" },
+    { name: "Birthday Bash",  image: "/Birthday.png" },
+    { name: "Royal Treat",  image: "/Royal.png" },
+    { name: "Blue Lagoon",  image: "/Blue.png" },
   ];
 
   const cupcakes = [
-    { name: "Mehndi Celebration", price: "N18k", image: "/img/cupcakes/cupcake1.jpg" },
-    { name: "Eid Special", price: "N18k", image: "/img/cupcakes/cupcake2.jpg" },
-    { name: "Graduation Classic", price: "N18k", image: "/img/cupcakes/cupcake3.jpg" },
-    { name: "Farewell Memory", price: "N18k", image: "/Farewall.png" },
-    { name: "Mehndi Celebration", price: "N18k", image: "/img/cupcakes/cupcake1.jpg" },
-    { name: "Eid Special", price: "N18k", image: "/img/cupcakes/cupcake2.jpg" },
-    { name: "Graduation Classic", price: "N18k", image: "/img/cupcakes/cupcake3.jpg" },
-    { name: "Farewell Memory", price: "N18k", image: "/Farewall.png" },
-    { name: "Mehndi Celebration", price: "N18k", image: "/img/cupcakes/cupcake1.jpg" },
-    { name: "Eid Special", price: "N18k", image: "/img/cupcakes/cupcake2.jpg" },
-    { name: "Graduation Classic", price: "N18k", image: "/img/cupcakes/cupcake3.jpg" },
-    { name: "Farewell Memory", price: "N18k", image: "/Farewall.png" },
+ { name: "Mehndi Celebration",  image: "/img/cake-feature/Mehndi.png" },
+    { name: "Eid Special",  image: "/img/cake-feature/Eid.png" },
+    { name: "Independence Day", image: "/img/cake-feature/pakistan.png" },
+    { name: "Wedding Qubool Hai",  image: "/img/cake-feature/qabool.png" },
+    { name: "Graduation Classic",  image: "/img/cake-feature/Degree.png" },
+    { name: "Welcome",  image: "/img/cake-feature/welcome.png" },
+    { name: "Engagement", image: "/img/cake-feature/Engage.png" },
+    { name: "Farewell Memory",  image: "/img/cake-feature/Farewell.png" },
+    { name: "Anniversary Love",  image: "/Annivarsary.png" },
+    { name: "Birthday Bash",  image: "/Birthday.png" },
+    { name: "Royal Treat",  image: "/Royal.png" },
+    { name: "Blue Lagoon",  image: "/Blue.png" },
   ];
 
   const displayedCakes = showAllCakes ? cakes : cakes.slice(0, 8);
@@ -65,10 +65,10 @@ const Menu = () => {
     <div className="col-lg-3 col-md-4 col-6" key={index}>
       <div className="cake_feature_item">
         <div className="cake_img">
-          <img style={{ height: '6cm', width: '6cm' }} src={item.image} alt={item.name} />
+          <img style={{ height: '6cm', width: '100%', objectFit: 'contain' }} src={item.image} alt={item.name} />
         </div>
         <div className="cake_text">
-          <h4>{item.price}</h4>
+          {/* <h4>{item.price}</h4> */}
           <h3>{item.name}</h3>
           <Link className="pest_btn" to="#">Add to cart</Link>
         </div>

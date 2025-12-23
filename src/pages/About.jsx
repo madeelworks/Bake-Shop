@@ -230,19 +230,19 @@ const About = () => {
             </div>
             <div className="specail_item">
               <div className="row">
-                <div className="col-lg-6">
+                <div className="col-lg-6 order-lg-1 order-2">
                   <div className="s_item_left">
-                    <div className="main_title">
+                    <div className="main_title mt-4">
                       <h2>Why Choose Dr-Yums?</h2>
                     </div>
                     <ul className="list_style">
-                      <li><a href="#">Fresh, locally sourced ingredients ensuring top quality.</a></li>
-                      <li><a href="#">Custom designs tailored to your special occasions.</a></li>
-                      <li><a href="#">A commitment to excellence and unforgettable taste.</a></li>
+                      <li><a >Fresh, locally sourced ingredients ensuring top quality.</a></li>
+                      <li><a >Custom designs tailored to your special occasions.</a></li>
+                      <li><a >A commitment to excellence and unforgettable taste.</a></li>
                     </ul>
                   </div>
                 </div>
-                <div className="col-lg-6">
+                <div className="col-lg-6 order-lg-2 order-1">
                   <div className="s_right_img">
                     <img className="img-fluid" src="/img/product/product-details-1.jpg" alt="" />
                   </div>
