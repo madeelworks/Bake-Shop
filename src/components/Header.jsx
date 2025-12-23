@@ -2,8 +2,7 @@ import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
-  const location = useLocation();
-  const currentPath = location.pathname;
+  const { pathname, hash } = useLocation();
 
   return (
     <header className="main_header_area five_header">
@@ -24,25 +23,25 @@ const Header = () => {
             </button>
             <div className="collapse navbar-collapse" id="navbarSupportedContent">
               <ul className="navbar-nav justify-content-end">
-                <li className={currentPath === '/' ? 'active' : ''}>
+                <li className={pathname === '/' && hash === '' ? 'active' : ''}>
                   <Link to="/">Home</Link>
                 </li>
-                <li className={currentPath === '/about-us' ? 'active' : ''}>
-                  <Link to="/about-us">About Us</Link>
+                <li className={hash === '#about' ? 'active' : ''}>
+                  <Link to="/#about">About Us</Link>
                 </li>
-                <li className={currentPath === '/cake' ? 'active' : ''}>
-                  <Link to="/cake">Cakes</Link>
+                <li className={hash === '#cake' ? 'active' : ''}>
+                  <Link to="/#cake">Cakes</Link>
                 </li>
-                <li className={currentPath === '/service' ? 'active' : ''}>
-                  <Link to="/service">Services</Link>
+                <li className={hash === '#service' ? 'active' : ''}>
+                  <Link to="/#service">Services</Link>
                 </li>
-                <li className={currentPath === '/menu' ? 'active' : ''}>
+                <li className={pathname === '/menu' ? 'active' : ''}>
                   <Link to="/menu">Menu</Link>
                 </li>
-                <li className={currentPath === '/cart' ? 'active' : ''}>
+                <li className={pathname === '/cart' ? 'active' : ''}>
                   <Link to="/cart">Place Order</Link>
                 </li>
-                <li className={currentPath === '/contact' ? 'active' : ''}>
+                <li className={pathname === '/contact' ? 'active' : ''}>
                   <Link to="/contact">Contact Us</Link>
                 </li>
               </ul>
