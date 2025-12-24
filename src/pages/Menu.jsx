@@ -43,23 +43,23 @@ const Menu = () => {
     { name: "Blue Lagoon",  image: "/Blue.png" },
   ];
 
-  const cupcakes = [
- { name: "Mehndi Celebration",  image: "/img/cake-feature/Mehndi.png" },
-    { name: "Eid Special",  image: "/img/cake-feature/Eid.png" },
-    { name: "Independence Day", image: "/img/cake-feature/pakistan.png" },
-    { name: "Wedding Qubool Hai",  image: "/img/cake-feature/qabool.png" },
-    { name: "Graduation Classic",  image: "/img/cake-feature/Degree.png" },
-    { name: "Welcome",  image: "/img/cake-feature/welcome.png" },
-    { name: "Engagement", image: "/img/cake-feature/Engage.png" },
-    { name: "Farewell Memory",  image: "/img/cake-feature/Farewell.png" },
-    { name: "Anniversary Love",  image: "/Annivarsary.png" },
-    { name: "Birthday Bash",  image: "/Birthday.png" },
-    { name: "Royal Treat",  image: "/Royal.png" },
-    { name: "Blue Lagoon",  image: "/Blue.png" },
-  ];
+//   const cupcakes = [
+//  { name: "Mehndi Celebration",  image: "/img/cake-feature/Mehndi.png" },
+//     { name: "Eid Special",  image: "/img/cake-feature/Eid.png" },
+//     { name: "Independence Day", image: "/img/cake-feature/pakistan.png" },
+//     { name: "Wedding Qubool Hai",  image: "/img/cake-feature/qabool.png" },
+//     { name: "Graduation Classic",  image: "/img/cake-feature/Degree.png" },
+//     { name: "Welcome",  image: "/img/cake-feature/welcome.png" },
+//     { name: "Engagement", image: "/img/cake-feature/Engage.png" },
+//     { name: "Farewell Memory",  image: "/img/cake-feature/Farewell.png" },
+//     { name: "Anniversary Love",  image: "/Annivarsary.png" },
+//     { name: "Birthday Bash",  image: "/Birthday.png" },
+//     { name: "Royal Treat",  image: "/Royal.png" },
+//     { name: "Blue Lagoon",  image: "/Blue.png" },
+//   ];
 
   const displayedCakes = showAllCakes ? cakes : cakes.slice(0, 8);
-  const displayedCupcakes = showAllCupcakes ? cupcakes : cupcakes.slice(0, 8);
+  // const displayedCupcakes = showAllCupcakes ? cupcakes : cupcakes.slice(0, 8);
 
   const renderItem = (item, index) => (
     <div className="col-lg-3 col-md-4 col-6" key={index}>
@@ -122,14 +122,14 @@ const Menu = () => {
       {/*================Cupcakes Area =================*/}
       <section className="price_list_area p_100" style={{ paddingTop: '0' }}>
         <div className="container">
-          <div className="main_title">
+          {/* <div className="main_title">
             <h2>Our Cupcakes</h2>
             <h5>Delightful little treats perfect for any gathering or just a personal indulgence.</h5>
-          </div>
-          <div className="row">
+          </div> */}
+          {/* <div className="row">
             {displayedCupcakes.map(renderItem)}
-          </div>
-          {!showAllCupcakes && cupcakes.length > 8 && (
+          </div> */}
+          {/* {!showAllCupcakes && cupcakes.length > 8 && (
             <div className="row" style={{ marginTop: '30px' }}>
               <div className="col-lg-12 text-center">
                 <button 
@@ -141,12 +141,22 @@ const Menu = () => {
                 </button>
               </div>
             </div>
-          )}
+          )} */}
         </div>
       </section>
       {/*================End Cupcakes Area =================*/}
 
-
+      {/*================Custom Cake Area =================*/}
+      <section className="custom_cake_area p_100">
+        <div className="container">
+          <div className="main_title">
+            <h2>Custom Cake Orders</h2>
+            <h5>We can make any custom cake you need! Just tell us your idea, and we will bake it exactly the way you want. Perfect for your special celebrations.</h5>
+            <a className="pest_btn" href="https://wa.me/923413663416" target="_blank" rel="noopener noreferrer">Order Custom Cake</a>
+          </div>
+        </div>
+      </section>
+      {/*================End Custom Cake Area =================*/}
 
       {/*================Client Says Area =================*/}
       <section className="client_says_area p_100">
@@ -163,7 +173,7 @@ const Menu = () => {
                   </div>
                   <div className="media-body">
                     <p>So in love with the cupcakes the taste was really something to write home about .</p>
-                    <h5>- Kelly </h5>
+                    <h5>Maryam Khalid </h5>
                   </div>
                 </div>
               </div>
@@ -173,7 +183,7 @@ const Menu = () => {
                   </div>
                   <div className="media-body">
                     <p>They really came throuhg for my birthday party with the stawberry covered cake will mostly likely use them next year again .</p>
-                    <h5>- Anna </h5>
+                    <h5>Muhammad Ameer </h5>
                   </div>
                 </div>
               </div>
@@ -183,7 +193,7 @@ const Menu = () => {
                   </div>
                   <div className="media-body">
                     <p>My go to cake shop in abuja i stop through  for the donuts and browines </p>
-                    <h5>- Ebuka </h5>
+                    <h5>Alishba Shan </h5>
                   </div>
                 </div>
               </div>

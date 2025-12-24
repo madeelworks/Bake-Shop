@@ -100,7 +100,7 @@ const Cake = () => {
               <div className="col-lg-3 col-md-4 col-6" key={index}>
                 <div className="cake_feature_item">
                   <div className="cake_img">
-                    <img style={{ height: '6cm', width: '6cm' }} src={cake.image} alt={cake.name} />
+                    <img style={{ height: '6cm', width: '100%', objectFit: 'contain' }} src={cake.image} alt={cake.name} />
                   </div>
                   <div className="cake_text">
                     <h3>{cake.name}</h3>
@@ -278,7 +278,7 @@ const Cake = () => {
                   </div>
                   <div className="media-body">
                     <p>So in love with the cupcakes the taste was really something to write home about .</p>
-                    <h5>- Kelly </h5>
+                    <h5></h5>
                   </div>
                 </div>
               </div>

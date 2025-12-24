@@ -96,4 +96,19 @@
     padding: 8px 25px;
     font-size: 14px;
   }
+  .hero-banner-image {
+    min-height: 500px;
+    object-fit: cover;
+  }
+}
+
+.custom_cake_area {
+  background: #f9f9f9;
+}
+.custom_cake_area .main_title {
+  margin-bottom: 0;
+}
+.custom_cake_area .pest_btn {
+  margin-top: 30px;
+  display: inline-block;
 }

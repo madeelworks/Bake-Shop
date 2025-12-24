@@ -2068,6 +2068,10 @@ i:before {
   font-family: "Playfair Display", serif;
   margin-bottom: 22px;
   padding-top: 35px;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .cake_feature_main {
