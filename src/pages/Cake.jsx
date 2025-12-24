@@ -100,7 +100,7 @@ const Cake = () => {
               <div className="col-lg-3 col-md-4 col-6" key={index}>
                 <div className="cake_feature_item">
                   <div className="cake_img">
-                    <img style={{ height: '6cm', width: '100%', objectFit: 'contain' }} src={cake.image} alt={cake.name} />
+                    <img style={{ height: '6cm', width: '100%', objectFit: 'cover' }} src={cake.image} alt={cake.name} />
                   </div>
                   <div className="cake_text">
                     <h3>{cake.name}</h3>

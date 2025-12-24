@@ -54,7 +54,7 @@ const Gallery = () => {
                 <div className="cake_feature_item">
                   <div className="cake_img">
                     <img 
-                      style={{ height: '6cm', width: '6cm', objectFit: 'contain' }} 
+                      style={{ height: '6cm', width: '100%', objectFit: 'cover' }} 
                       src={`/${image}`} 
                       alt={`Gallery ${index + 1}`} 
                     />
