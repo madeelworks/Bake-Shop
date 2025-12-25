@@ -1,7 +1,59 @@
-import React from 'react';
+import React, { useState, useRef } from "react";
 import { Link } from 'react-router-dom';
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const form = useRef();
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+  const [status, setStatus] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({ ...prevData, [name]: value }));
+  };
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    const templateParams = {
+      name: formData.name,
+      email: formData.email,
+      subject: formData.subject,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_moq4wq8",
+        "template_fb60tza",
+        templateParams,
+        "mDKyRWP-_7lCIZhxx"
+      )
+      .then(
+        (result) => {
+          console.log("SUCCESS!", result.text);
+          setStatus("Message sent successfully!");
+          setFormData({ name: "", email: "", subject: "", message: "" });
+        },
+        (error) => {
+          console.error("FAILED...", error);
+          let errorMessage = error.text || error.message || JSON.stringify(error);
+          
+          // Check for specific Gmail API error
+          if (errorMessage.includes("insufficient authentication scopes")) {
+            errorMessage = "Error: EmailJS Gmail permission missing. Please go to EmailJS Dashboard -> Email Services -> Reconnect Gmail and grant 'Send email' permission.";
+          }
+          
+          setStatus("Failed to send message: " + errorMessage);
+        }
+      );
+  };
+
   return (
     <div>
       {/*================Banner Area =================*/}
@@ -27,22 +79,58 @@ const Contact = () => {
           </div>
           <div className="row">
             <div className="col-lg-7">
-              <form className="row contact_us_form" action=" https://formspree.io/f/moqgaqbp" method="POST" id="contactForm" noValidate>
-                <input type="hidden" name="_formspree" value="YOUR_FORM_NAME" />
+              <form className="row contact_us_form" ref={form} onSubmit={sendEmail} id="contactForm" noValidate>
                 <div className="form-group col-md-6">
-                  <input type="text" className="form-control" id="name" name="name" placeholder="Your name" />
+                  <input 
+                    type="text" 
+                    className="form-control" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Your name" 
+                    value={formData.name}
+                    onChange={handleChange}
+                    required 
+                  />
                 </div>
                 <div className="form-group col-md-6">
-                  <input type="email" className="form-control" id="email" name="email" placeholder="Email address" />
+                  <input 
+                    type="email" 
+                    className="form-control" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Email address" 
+                    value={formData.email}
+                    onChange={handleChange}
+                    required 
+                  />
                 </div>
                 <div className="form-group col-md-12">
-                  <input type="text" className="form-control" id="subject" name="subject" placeholder="Subject" />
+                  <input 
+                    type="text" 
+                    className="form-control" 
+                    id="subject" 
+                    name="subject" 
+                    placeholder="Subject" 
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required 
+                  />
                 </div>
                 <div className="form-group col-md-12">
-                  <textarea className="form-control" name="message" id="message" rows="1" placeholder="Write message"></textarea>
+                  <textarea 
+                    className="form-control" 
+                    name="message" 
+                    id="message" 
+                    rows="1" 
+                    placeholder="Write message" 
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  ></textarea>
                 </div>
                 <div className="form-group col-md-12">
                   <button type="submit" className="btn order_s_btn form-control">submit now</button>
+                  {status && <p style={{ marginTop: "10px", color: status.includes("success") ? "green" : "red" }}>{status}</p>}
                 </div>
               </form>
             </div>
